@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  background-color: brown;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 500px;
+  align-items: center;
+}
+
+.viewer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
+  gap: 5px;
+}
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #000;
+}

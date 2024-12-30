@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: blue;
+  width: 500px;
+  align-items: center;
+  justify-content: space-between;
+}
