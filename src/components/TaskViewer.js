@@ -18,7 +18,7 @@ export default function TaskViewer({
               }`}
               onClick={() => toggleTaskSelection(index)}
             ></div>
-            <p>{t.text}</p>
+            <p className={styles.singletasktext}>{t.text}</p>
             <Image
               src={"/images/icon-cross.svg"}
               width={16}

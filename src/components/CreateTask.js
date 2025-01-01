@@ -12,17 +12,18 @@ export default function CreateTask({ addTask }) {
     }
   };
 
-
   return (
     <div className={styles.wrapper}>
       <form className={styles.formStyle} onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className={styles.input}
-          placeholder="Create a new task..."
-          value={task}
-          onChange={(e) => setTask(e.target.value)}
-        />
+        <div className={styles.inputContainer}>
+          <input
+            type="text"
+            className={styles.input}
+            placeholder="Create a new task..."
+            value={task}
+            onChange={(e) => setTask(e.target.value)}
+          />
+        </div>
       </form>
     </div>
   );

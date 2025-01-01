@@ -10,23 +10,32 @@ export default function Home() {
   };
   const backgroundStyle = {
     backgroundImage: `url(${
-      theme === "light"
-        ? "/images/bg-light.jpg"
-        : "/images/bg-dark.jpg"
+      theme === "light" ? "/images/bg-light.jpg" : "/images/bg-dark.jpg"
     })`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     height: "100vh",
   };
+
+  const TaskManagerBackground = {
+    backgroundImage: `url(${
+      theme === "light" ? "/images/white-bg.jpg" : "/images/dark-bg.jpg"
+    })`,
+    // backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    height: "100vh",
+  };
+    // const inputBackground = {
+    //   backgroundImage: `url(${
+    //     theme === "light" ? "/images/white-bg.jpg" : "/images/dark-bg.jpg"
+    //   })`,
+    // };
   let iconSource = {
     src: theme === "light" ? "/images/icon-sun.svg" : "/images/icon-moon.svg",
     height: 16,
     width: 16,
   };
-  //console.log("Current theme:", theme);
-
   return (
-    //adding the style as a variable to force next js to render
     <div style={backgroundStyle} theme={setTheme}>
       <Header
         theme={setTheme}
@@ -34,17 +43,7 @@ export default function Home() {
         iconSource={iconSource}
       />
 
-      <TaskManager />
-      {/* <TaskFilter /> */}
+      <TaskManager style={(TaskManagerBackground)} />
     </div>
   );
 }
-
-//  backgroundImage: `url(${
-//           theme === "light"
-//             ? "/images/bg-desktop-light.jpg"
-//             : "/images/bg-desktop-dark.jpg"
-//         })`,
-// backgroundSize: "cover",
-//         backgroundRepeat: "no-repeat",
-//         height: "100vh",

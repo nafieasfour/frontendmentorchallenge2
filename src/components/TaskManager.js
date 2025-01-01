@@ -3,7 +3,7 @@ import CreateTask from "./CreateTask";
 import TaskViewer from "./TaskViewer";
 import TaskFilter from "./TaskFilter";
 
-export default function TaskManager() {
+export default function TaskManager({ style }) {
   const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState("All");
 
@@ -34,7 +34,7 @@ export default function TaskManager() {
   });
 
   return (
-    <div>
+    <div style={style}>
       <CreateTask addTask={addTask} />
       <TaskViewer
         tasks={filteredTasks}
